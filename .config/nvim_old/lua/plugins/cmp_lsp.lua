@@ -12,7 +12,7 @@ return {
 			-- "hrsh7th/cmp-nvim-lsp-signature-help",
 		},
 		opts = function()
-			local cmp = require("cmp")
+			local cmp = require(".config.nvim.lua.plugins.code")
 			local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 			cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 			cmp.register_source("easy-dotnet", require("easy-dotnet").package_completion_source)

@@ -50,10 +50,10 @@ return {
 				-- 	}
 				-- },
 				xmlprettier = {
-					command = '/home/kiennam/.local/share/nvim/mason/bin/prettier',
+					command = '$HOME/.local/share/nvim/mason/bin/prettier',
 					args = {
 						"--plugin",
-						"/home/kiennam/.nvm/versions/node/v23.10.0/lib/node_modules/@prettier/plugin-xml/src/plugin.js",
+						"$HOME/.nvm/versions/node/v23.10.0/lib/node_modules/@prettier/plugin-xml/src/plugin.js",
 						"--tab-width",
 						"4",
 						"--bracket-same-line",

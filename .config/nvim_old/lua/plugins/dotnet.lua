@@ -24,9 +24,9 @@ return {
 					enabled = true
 				},
 				picker = "snacks",
-				get_sdk_path = function()
-					return "~/.dotnet/sdk/8.0.407/"
-				end,
+				notifications = {
+					handler = false,
+				},
 				test_runner = {
 					---@type "split" | "float" | "buf"
 					viewmode = "float",
