@@ -20,6 +20,7 @@ return {
 				-- keymaps only work in insert mode
 				["<Tab>"] = { "select_next", "snippet_backward", "fallback" },
 				["<S-Tab>"] = { "select_prev", "snippet_forward", "fallback" },
+				["<CR>"] = { "accept", "fallback" },
 				["<esc>"] = { "cancel", "hide", "fallback" },
 				["<C-.>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-u>"] = { "scroll_documentation_up", "scroll_signature_up", "fallback" },
@@ -38,7 +39,7 @@ return {
 					},
 				},
 				menu = {
-					auto_show = false,
+					auto_show = true,
 				},
 			},
 			signature = {
@@ -78,7 +79,7 @@ return {
 			require("easy-dotnet").setup({
 				picker = "snacks",
 				test_runner = {
-					viewmode="vsplit",
+					viewmode = "vsplit",
 				},
 			})
 		end,
