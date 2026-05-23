@@ -31,7 +31,10 @@ return {
 				nerd_font_variant = "mono",
 			},
 			completion = {
-				documentation = { auto_show = true },
+				documentation = {
+					auto_show = true,
+					treesitter_highlighting = true,
+				},
 				list = {
 					selection = {
 						auto_insert = true,

@@ -7,14 +7,30 @@ return {
 		opts = {
 			bigfile = { enabled = true },
 			dashboard = { enabled = true },
-			explorer = { enabled = true },
+			explorer = {
+				enabled = true,
+			},
 			indent = { enabled = true },
 			input = { enabled = true },
 			notifier = {
 				enabled = true,
 				timeout = 3000,
 			},
-			picker = { enabled = true },
+			picker = {
+				enabled = true,
+				sources = {
+					explorer = {
+						exclude = {
+							"**/*.log",
+							"**/node_modules/**",
+							"**/*.temp",
+							"**/*.uid",
+							"**/*.import",
+							"**/*.blend1",
+						},
+					},
+				},
+			},
 			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
@@ -604,7 +620,7 @@ return {
 		opts = {},
 		keys = {
 			{
-				"<M-s>",
+				"s",
 				mode = { "n", "x", "o" },
 				function()
 					require("flash").jump()
@@ -612,7 +628,7 @@ return {
 				desc = "Flash",
 			},
 			{
-				"<M-S>",
+				"S",
 				mode = { "n", "x", "o" },
 				function()
 					require("flash").treesitter()

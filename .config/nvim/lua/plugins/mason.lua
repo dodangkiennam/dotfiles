@@ -10,10 +10,12 @@ return {
 		opts = {
 			ensure_installed = {
 				-- formatters
-				'stylua', -- lua
-				'csharpier', -- c#
+				"stylua", -- lua
+				"csharpier", -- c#
+				"gdscript-formatter", -- godot
 				-- lsp
-				'lua-language-server', -- lua
+				"lua-language-server", -- lua
+				"gdtoolkit", -- godot
 			},
 			run_on_start = false,
 		},
