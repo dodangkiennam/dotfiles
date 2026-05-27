@@ -30,6 +30,16 @@ return {
 			appearance = {
 				nerd_font_variant = "mono",
 			},
+			cmdline = {
+				completion = {
+					menu = { auto_show = true },
+					list = {
+						selection = {
+							preselect = false,
+						},
+					},
+				},
+			},
 			completion = {
 				documentation = {
 					auto_show = true,

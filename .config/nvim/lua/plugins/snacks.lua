@@ -18,6 +18,12 @@ return {
 			},
 			picker = {
 				enabled = true,
+				layout = {
+					preset = "ivy",
+					layout = {
+						-- backdrop = false,
+					},
+				},
 				sources = {
 					explorer = {
 						exclude = {
@@ -27,6 +33,14 @@ return {
 							"**/*.uid",
 							"**/*.import",
 							"**/*.blend1",
+						},
+						jump = { close = true },
+						layout = {
+							preset = "ivy",
+							preview = true,
+							layout = {
+								-- backdrop = false,
+							},
 						},
 					},
 				},
