@@ -86,6 +86,37 @@ return {
 		opts_extend = { "sources.default" },
 	},
 	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-neotest/nvim-nio",
+			"nvim-lua/plenary.nvim",
+			"antoinemadec/FixCursorHold.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"GustavEikaas/easy-dotnet.nvim",
+		},
+		config = function()
+			require("neotest").setup({
+				adapters = {
+					require("easy-dotnet.neotest"),
+				},
+			})
+		end,
+		keys = {
+			{
+				"<leader>ts",
+				mode = "n",
+				function()
+					require("neotest").summary.toggle()
+					local win = vim.fn.bufwinid("Neotest Summary")
+					if win > -1 then
+						vim.api.nvim_set_current_win(win)
+					end
+				end,
+				desc = "Neotest summary",
+			},
+		},
+	},
+	{
 		"GustavEikaas/easy-dotnet.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
 		config = function()
@@ -93,6 +124,7 @@ return {
 				picker = "snacks",
 				test_runner = {
 					viewmode = "vsplit",
+					neotest_integration = true,
 				},
 			})
 		end,
